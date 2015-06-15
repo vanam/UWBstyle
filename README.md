@@ -13,3 +13,7 @@ UWBstyle is a spin-off of a [CTUstyle](http://petr.olsak.net/ctustyle.html) made
 ## License
 
 Same as [OPmac/CTUstyle license (czech only)](http://petr.olsak.net/opmac.html).
+
+## Contribution
+
+Feel free to fork this project, fix bugs, etc.!
