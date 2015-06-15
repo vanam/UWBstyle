@@ -1,0 +1,48 @@
+
+\chap Vlastnosti šablony
+
+\sec Konzervativní titulní strana
+
+Dle požadavku katedry jsem vytvořil konzervativní variantu titulní strany, na které se nenachází ani logo ani další ozdobné prvky. Použití je jednoduché -- stačí nadefinovat makro "\def\conservative{}" a vyplnit konzervativní titulek "\conservativetitle{\the\title: \the\subtitle}".
+
+
+\secc Minimální dokument s konzervativní titulní stranou
+
+\begtt
+\def\conservative{}
+
+\input uwbstyle
+
+\worktype [B/CZ]
+\faculty {FAV}
+\department {Katedra permoníků}
+\title {Minimální dokument}
+\conservativetitle{\the\title}
+\author {Pepa z Depa}
+\date {Leden 2013}
+\abstractEN {This document is for testing purpose only.}
+\abstractCZ {Tento dokument je pouze pro potřeby testování.}
+\declaration {Prohlašuji, že jsem se neflákal.}
+\makefront
+
+\chap Úvod
+
+Text úvodu.
+
+\sec Myšlenka
+
+Další text.
+\bye
+\endtt
+
+\sec Drobné typografické změny
+
+\begitems
+
+* {\bf Loga a barvy fakult} -- Barva ozdobných prvků šablony a logo se mění dle použité fakulty a vychází z {\sl Jednotného vizuálního vzhledu} univerzity\fnote{\url{https://www.zcu.cz/about/vyznamne-dokumenty/Manual_jednotneho_vizualniho_stylu.pdf}}.
+
+* {\bf Kapitoly a přílohy} -- Kapitoly a přílohy začínají vždy na liché stránce.
+
+* {\bf Poznámky pod čarou} -- Poznámky pod čarou mají odlehčenější značku v textu\fnote{Ukázka poznámky pod čarou.}.
+
+\enditems

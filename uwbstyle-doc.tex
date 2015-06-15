@@ -1,0 +1,107 @@
+% The documentation of the usage of UWBstyle -- the template for
+% typesetting thesis by plain\TeX at UWB in Pilsen
+% ---------------------------------------------------------------------
+% Martin Váňa  Jun. 2015
+
+% You can copy this file to your own file and do some changes.
+% Then you can run:  pdfcsplain your-file
+
+%\def\conservative{} % Uncomment this if you really want conservative title page
+
+\input uwbstyle   % The template is included here.
+\input pdfuni    % Uncomment this if you need accented PDFoutlines
+%\input opmac-bib % Uncomment this for direct reading of .bib database files
+
+\worktype [O/CZ] % Type: B = bachelor, M = master, D = Ph.D., O = other
+                 % / the language: CZ = Czech, SK = Slovak, EN = English
+
+\faculty    {FAV}  % Type your faculty FAV, FEK, FEL, etc.
+            % use main language of your document here:
+\department {Katedra informatiky a výpočetní techniky}
+\title      {UWBstyle -- návod k použití}
+\subtitle   {Šablona v plain\TeX{}u nejen pro sazbu
+             studentských závěrečných prací na ZČU}
+            % \subtitle is optional
+%\conservativetitle  {\the\title: \the\subtitle}
+            % \conservativetitle is optional and is used at ugly title page
+\author     {Martin Váňa}
+\date       {Červen 2015}
+\supervisor {}  % One or more supervisors
+\studyinfo  {}  % Study programme etc.
+\workname   {Dokumentace} % Used only if \worktype [O/*] (Other)
+            % optional more information about the document:
+\workinfo   {\url{http://martinvana.com}}
+            % Title / Subtitle in minor language:
+\titleEN    {UWBstyle -- the user manual}
+\subtitleEN {the plain\TeX{} template for theses at UWB}
+            % If minor language is other than English
+            % use \titleCZ, \subtitleCZ or \titleSK, \subtitleSK instead it.
+\pagetwo    {}  % The text printed on the page 2 at the bottom.
+
+\abstractEN {
+   This document shows and tests an usage of the plain\TeX{} design style
+   {\ssr UWBstyle} not only for bachelor (Bsc.), master
+   (Ing.), or doctoral (Ph.D.) theses at the University of West Bohemia in
+   Pilsen. The template defines all thesis mandatory structural elements and
+   typesets their content to fulfil the university formal rules. It is based on
+   CTUstyle made by Petr Olšák for the Czech Technical University in
+   Prague.
+}
+\abstractCZ {
+   Tento dokument ukazuje a testuje použití plain\TeX{}ové šablony
+   {\ssr UWBstyle} nejen pro sazbu bakalářských,
+   diplomových a disertačních prací na Západočeské univerzitě v~Plzni.
+   Šablona definuje všechny povinné strukturní
+   elementy zmíněných závěrečných prací a formátuje jejich obsah tak, aby
+   splňovala na škole daná formální pravidla. Je založena na šabloně pro České
+   vysoké učení technické v Praze vytvořené Petrem Olšákem.
+}           % If your language is Slovak use \abstractSK instead \abstractCZ
+
+\keywordsEN {%
+   document design template; bachelor, master, Ph.D. thesis; \TeX{}.
+}
+\keywordsCZ {%
+   styl dokumentu; šablona;
+   bakalářská, diplomová, disertační závěrečná práce; \TeX{}.
+}
+\thanks {           % Use main language here
+   Chtěl bych poděkovat RNDr.~Petru Olšákovi za tvorbu nástroje OPmac,
+   vytvoření šablony CTUstyle, na které je tato práce založena, a za vstřícnost
+   a cenné rady.
+}
+\declaration {      % Use main language here
+   \vtop to0pt{ % Temporary solution
+       Prohlašuji, že jsem bakalářskou práci vypracoval samostatně a výhradně s~použitím citovaných pramenů.
+
+       V~Plzni dne 13. 13. 2015 % !!! Attention, you have to change this item.
+       \signature % makes dots
+
+       \centerline{Martin Váňa}
+
+       \vfil
+
+       V~práci jsou použity názvy softwarových produktů, firem, apod., které mohou být ochrannými známkami nebo registrovanými ochrannými známkami příslušných vlastníků.\strut
+
+       \par \kern-\frontht
+   }
+}
+
+%%%%% <--   % The place for your own macros is here.
+
+%\draft     % Uncomment this if the version of your document is working only.
+%\linespacing=1.7  % uncomment this if you need more spaces between lines
+                   % Warning: this works only when \draft is activated!
+%\savetoner        % Turns off the lightBlue backround of tables and
+                   % verbatims, only for \draft version.
+%\blackwhite       % Use this if you need really Black+White thesis.
+%\onesideprinting  % Use this if you really don't use duplex printing.
+
+\makefront  % Mandatory command. Makes title page, acknowledgment, contents etc.
+
+% Files where the source of the document is prepared
+% Full name is: uvod.tex, popis.tex, the suffix can be omitted.
+
+\input uvod    % Files where the source of the document is prepared.
+\input popis   % Full name is: uvod.tex, popis.tex, the suffix can be omitted.
+
+\bye
